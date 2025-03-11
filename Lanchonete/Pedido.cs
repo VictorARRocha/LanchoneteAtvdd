@@ -28,14 +28,14 @@ namespace Lanchonete
             Console.WriteLine();
             Console.WriteLine();
             Console.WriteLine();
-            Console.WriteLine($"O numero do pedido é: {numeroPedido}");
+            Console.WriteLine($" - Pedido #{numeroPedido}");
             foreach (var item in ListaProdutos)
             {
-                Console.WriteLine($"O nome do produto é: {item.NomeProduto}");
-                Console.WriteLine($"O valor do produto é: {item.PrecoProduto}");
+                Console.WriteLine($" - {item.NomeProduto} - R${item.PrecoProduto}");
+               
             }
 
-            Console.WriteLine($"O total do pedido é: {totalPedido}");
+            Console.WriteLine($"Total: R${totalPedido}");
         }
 
 

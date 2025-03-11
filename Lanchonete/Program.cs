@@ -44,12 +44,14 @@
                 Console.Clear();
                 Console.WriteLine("Vamos anotar os pedidos: ");
                 bool continuar = true;
+                int numPedido = 0;
                 while (continuar)
                 {
+                    numPedido++;
                     Console.WriteLine("Quantos produtos você deseja adicionar?");
                     int numProd = int.Parse(Console.ReadLine());
                     Pedido pedido = new Pedido();
-                    pedido.numeroPedido++;
+                    pedido.numeroPedido = numPedido;
                     for (int i = 0; i < numProd; i++)
                     {
                         Console.WriteLine();
@@ -86,6 +88,7 @@
 
                     }
                     gerenciar.AdicionarPedido(pedido);
+
                     Console.WriteLine("Você deseja fazer mais pedidos? Digite N para terminar ");
                     Console.Write("Deseja adicionar outro pedido? (s/n): ");
                     string resposta = Console.ReadLine();
