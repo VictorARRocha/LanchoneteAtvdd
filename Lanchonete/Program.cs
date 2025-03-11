@@ -40,6 +40,7 @@
                 cardapio.Add(novoProduto);
 
 
+
                 Console.Clear();
                 Console.WriteLine("Vamos anotar os pedidos: ");
                 bool continuar = true;
@@ -49,9 +50,9 @@
                     int numProd = int.Parse(Console.ReadLine());
                     Pedido pedido = new Pedido();
                     pedido.numeroPedido++;
-                    for (int i = 0; i <= numProd; i++)
+                    for (int i = 0; i < numProd; i++)
                     {
-
+                        Console.WriteLine();
                         Console.WriteLine($"0 - Hamburguer, 1 - Batata, 2 - Bebidas, 3 - HotDog, 4 - {novoProduto.NomeProduto}");
                         Console.WriteLine("Qual Produto você deseja adicionar");
 
@@ -60,27 +61,22 @@
                         {
                             case 0:
                                 pedido.ListaProdutos.Add(hamburguer);
-                                i++;
                                 break;
 
                             case 1:
                                 pedido.ListaProdutos.Add(batata);
-                                i++;
                                 break;
 
                             case 2:
                                 pedido.ListaProdutos.Add(bebida);
-                                i++;
                                 break;
 
                             case 3:
                                 pedido.ListaProdutos.Add(hotdog);
-                                i++;
                                 break;
 
                             case 4:
                                 pedido.ListaProdutos.Add(novoProduto);
-                                i++;
                                 break;
 
                             default:
