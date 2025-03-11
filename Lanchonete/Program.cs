@@ -48,7 +48,8 @@
                     Console.WriteLine("Quantos produtos você deseja adicionar?");
                     int numProd = int.Parse(Console.ReadLine());
                     Pedido pedido = new Pedido();
-                    for (int i = 0; i < numProd; i++)
+                    pedido.numeroPedido++;
+                    for (int i = 0; i <= numProd; i++)
                     {
 
                         Console.WriteLine($"0 - Hamburguer, 1 - Batata, 2 - Bebidas, 3 - HotDog, 4 - {novoProduto.NomeProduto}");
@@ -86,15 +87,16 @@
                                 Console.WriteLine("Produto inexistente, insira um produto valido");
                                 break;
                         }
-                    }
 
+                    }
+                    gerenciar.AdicionarPedido(pedido);
                     Console.WriteLine("Você deseja fazer mais pedidos? Digite N para terminar ");
                     Console.Write("Deseja adicionar outro pedido? (s/n): ");
                     string resposta = Console.ReadLine();
                     continuar = (resposta == "s");
                 }
 
-
+                gerenciar.MostrarPedidos();
                 
             }
             catch (System.DivideByZeroException)

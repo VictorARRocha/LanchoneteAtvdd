@@ -10,7 +10,7 @@ namespace Lanchonete
 {
     public class Pedido
     {
-        public int numeroPedido = 1;
+        public int numeroPedido = 0;
         public List<Produto> ListaProdutos = new List<Produto>();
 
       
